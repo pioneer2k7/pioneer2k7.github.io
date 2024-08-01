@@ -1,2 +1,2 @@
-# JS-Training
+# Test
 Test
