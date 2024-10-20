@@ -187,6 +187,16 @@ console.log(studentsPerCourse.length)
 // Aufgaben:
 // 
 //  a) Berechne die Anzahl der Teilnehmer in allen Kursen zusammen!
+console.log("-".repeat(20) + "\n Aufgabe 4a \n" + "-".repeat(20))
+
+
+let amountStudents = 0;
+for (const students of studentsPerCourse) {
+  amountStudents += students.length
+}
+console.log("Es sind insgesamt " + amountStudents + " Teilnehmer");
+
+
 // 
 //  b) Der Teilnehmer "Max" musste seinen Sprachkurs absagen. Schreibe
 //     ein Programm, was ihn aus seinem Kurs entfernt. Dieses Programm
@@ -199,6 +209,25 @@ console.log(studentsPerCourse.length)
 //
 // Wichtig: Schreibe den Code so, dass er später auch mit 3 oder mehr
 // Sprachkursen zurechtkommt!
+
+console.log("-".repeat(20) + "\n Aufgabe 4b \n" + "-".repeat(20))
+
+let removeStd1 = "Maxi"
+let removeStd2 = "Erika"
+let studentFound = false
+for (const student of studentsPerCourse) {
+    if (student.indexOf(removeStd1) !== -1) {
+      let studentToRemove = student.indexOf(removeStd1)
+      student.splice(studentToRemove, 1)
+      studentFound = true
+    }
+}
+
+if (studentFound === false) {
+  console.log("Es konnte kein Teilnehmer namens " + removeStd1 + " gefunden werden.")
+}
+console.log(studentsPerCourse)
+
 //
 // Bonus-Aufgabe:
 // 
