@@ -180,7 +180,7 @@ for (const i in levels) {
 // Kurs hinzugefügt werden:
 let studentsPerCourse = [
   ["Max", "Monika"], // Erster Kurs
-  ["Erik", "Erika"] // Zweiter Kurs
+  ["Erik", "Erika", "Babler"] // Zweiter Kurs
 ]
 
 console.log(studentsPerCourse.length)
@@ -238,3 +238,13 @@ console.log(studentsPerCourse)
 //     Wie geht dein Programm mit dem Fall um, dass 2 Sprachkurse
 //     genau gleich viele Teilnehmer haben? Ist das Verhalten
 //     für eine Sprachschule akzeptabel?
+
+console.log("Bonusaufgabe!")
+console.log(studentsPerCourse);
+
+let newStudent = "Karli Kickler"
+
+for (const i in studentsPerCourse) {
+  console.log(studentsPerCourse[i].length + " Teilnehmer in Kurs " + i);
+  
+}

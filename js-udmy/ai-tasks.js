@@ -58,6 +58,12 @@ for (const array of matrix) {
     console.log(array);
 }
 
+for (const array of matrix) {
+    for (const innerArray of array) {
+        console.log(innerArray)
+    }
+}
+
 // Aufgabe: Verwende for...in, um die Indizes jedes inneren Arrays zu loggen
 
 for (const index in matrix) {
