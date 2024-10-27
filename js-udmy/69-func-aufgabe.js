@@ -189,6 +189,41 @@ console.log(ucFirst("dere oida"))
 //      Neuronale Netze verwendet werden. Die würde man dann aber eher in 
 //      C++ oder Python entwickeln als in JavaScript.
 
+const LANGUAGE_DE1 = [
+    "hallo",
+    "heute",
+    "sprachkurs",
+    "willkommen",
+    "mikrofon",
+    "und"
+  ]
+  
+  const LANGUAGE_EN1 = [
+    "hello",
+    "today",
+    "language course",
+    "welcome",
+    "microphone",
+    "and"
+  ]
+
+let sentenceToTr = "Hello und willkommen beim Sprachkurs"
+/**
+ * Input wird auf Englisch übersetzt
+ * @param {String} sentence 
+ * @returns {String}
+ */
 function translateSentence(sentence) {
 
+    let words = sentence.toLowerCase().split(" ")
+
+    let wordsEng = [];
+
+    for (const word of words) {
+        let wordEng = translateWord(word);
+        wordsEng.push(wordEng)
+    }
+    return ucFirst(wordsEng.join(" "))
 }
+
+console.log(translateSentence(sentenceToTr));
