@@ -70,6 +70,7 @@ const students = [
   {firstname: "Max", lastname: "Mustermann", age: 21},
   {firstname: "Laura", lastname: "Müller", age: 25},
   {firstname: "Julia", lastname: "Schreiber", age: 30},
+  {firstname: "ASD", lastname: "123"},
   {firstname: "Tobias", lastname: "Lieb", age: 19}
 ]
 // 2a) Die Sprachschule hat eine Marketing-Agentur engagiert, die 
@@ -79,9 +80,28 @@ const students = [
 //     der Teilnehmer zu berechnen. Diese Berechnung soll natürlich
 //     mit Hilfe von JavaScript-Code durchgeführt werden!
 // 
+
+let ageAvg = 0
+let ageSum = 0
+
+for (const student of students) {
+    ageSum += student.age
+}
+
+ageAvg = (ageAvg + ageSum) / students.length;
+console.log(ageAvg)
+
 // 2b) Füge einen neuen Teilnehmer mit dem Namen "Christian Schmidt"
 //     hinzu. Lasse bei diesem Teilnehmer die Eigenschaft "age" weg - 
 //     wir wissen das Alter noch nicht. 
+
+students.push({
+  firstname: "Christian",
+  lastname: "Schmidt" 
+})
+
+console.log(students)
+
 // 
 // 2c) Funktioniert der Code aus Teilaufgabe 2a) noch, auch wenn er
 //     auf der jetzt aktualisierten Teilnehmerliste ausgeführt wird?
@@ -96,3 +116,20 @@ const students = [
 //         mehr korrekt durch!
 // 
 
+let ageAvg2 = 0
+let ageSum2 = 0
+let studentsWithAge = 0
+let noAge = 0
+
+for (const student of students) {
+    if (student.age) {
+    ageSum2 += student.age
+    studentsWithAge++
+  } if (student.age === undefined) {
+    console.log(student.firstname + " hat kein Alter angegeben")
+    noAge++
+  }
+}
+ageAvg2 = (ageAvg2 + ageSum2) / studentsWithAge;
+console.log(ageAvg2)
+console.log(noAge)
