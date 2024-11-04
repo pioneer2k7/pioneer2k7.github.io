@@ -69,4 +69,6 @@ for (const launch of launches) {
 }
 console.log(payloadKg)
 
+
+//test
 // console.log(launches[0]["rocket"]["second_stage"]["payloads"][0]["payload_mass_kg"])
