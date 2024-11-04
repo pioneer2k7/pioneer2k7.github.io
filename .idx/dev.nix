@@ -11,6 +11,7 @@
     # pkgs.python311Packages.pip
     pkgs.nodejs_20
     # pkgs.nodePackages.nodemon
+    pkgs.python3
   ];
 
   # Sets environment variables in the workspace
@@ -25,6 +26,10 @@
     previews = {
       enable = true;
       previews = {
+          web = {
+          command = ["python3" "-m" "http.server" "$PORT" "--bind" "0.0.0.0"];
+          manager = "web";
+          };
         # web = {
         #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
         #   # and show it in IDX's web preview panel
