@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
       
       alertDiv.appendChild(document.createTextNode("Bitte einen vollen Namen eingeben!"));
 
-      const formTag = document.getElementsByTagName("form");
-      formTag[0].after(alertDiv)
+      const formTag = document.querySelector("form");
+      formTag.after(alertDiv)
       alertDivs++
       setInterval(() => {
         alertDiv.remove();
